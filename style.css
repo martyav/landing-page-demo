@@ -1,11 +1,11 @@
 body {
-    --accent-color: green;
+    --accent-color: #0047AB; /* cobalt */
     --main-color: white;
     --secondary-color: #ddd;
     --main-text: #333;
     --accent-text: white;
     
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
 }
 
@@ -27,14 +27,15 @@ footer, main {
 
 header {
     display: flex;
+    align-content: stretch;
     align-items: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10000;
-    box-shadow: 0 3px 15px black;
-    justify-content: space-between;
+    box-shadow: 0 3px 15px navy;
 }
 
 header * {
@@ -60,34 +61,53 @@ header h1 {
 .nav-link {
     background-color: inherit;
     color: inherit;
+    font-size: 0.9em;
     border: none;
-    padding: none;
+    padding: 12px;
+}
+
+.nav-link:hover {
+    background-color: cornflowerblue;
 }
 
 main {
-    padding-top: 10vh;
     background-color: var(--main-color);
     color: var(--main-text);
 }
 
-main p:first-child {
-    color: var(--accent-color);
-}
-
 #about {
-   font-size: 2em;
+   font-size: 1.3em;
    line-height: 1.3em;
-   font-family: 'Overlock', sans-serif;
-   max-width: 50vw;
+   font-family: 'Exo', sans-serif;
+   max-width: 40vw;
    min-width: 33vw;
    margin-left: auto;
    margin-right: auto;
+   padding-top: 10vh;
+   padding-bottom: 3vh;
+}
+
+#about p:first-child {
+    color: var(--accent-color);
 }
 
 #signup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    color: white;
+}
+
+#signup img {
+    width: 50vw;
+    height: auto;
+}
+
+#signup form {
     display: flex;
+    flex-flow:row wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 3em;
     font-family: 'Oswald', sans-serif;
     padding-bottom: 30px;
@@ -103,12 +123,16 @@ main p:first-child {
     line-height: 44px;
     font-size: 20px;
     padding-left: 8px;
-    margin-left: 16px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+    margin-left: 8px;
     border-bottom: 3px solid var(--accent-color);
     background-color: var(--secondary-color);
+}
+
+#signup input[type = "email"]:hover {
+    background-color: white;
+    border-left: 1px solid var(--accent-color);;
+    border-right: 1px solid var(--accent-color);;
+    border-top: 1px solid var(--accent-color);;
 }
 
 #signup button {
@@ -122,42 +146,30 @@ main p:first-child {
     border: none;
 }
 
-/*
-    Below code from https://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design/
-*/
-
-#testimonial {
-    background-color: black;
-    text-align: center;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 35px;
-    height: 0;
-    overflow: hidden;
-    border-top: 22px solid var(--accent-color);
-    border-bottom: 22px solid var(--accent-color);
-}
-
-#testimonial iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 #news {
-    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    align-items: center;
+    padding-bottom: 16px;
     background-color: var(--secondary-color);
     color: var(--main-text);
     font-size: 1.3em;
 }
 
+#news .article {
+    padding: 8px;
+} 
+
 #news blockquote {
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row wrap;
     font-family: 'Oswald', sans-serif;
-    color: var(--accent-color);
-    font-size: 2em;
-    text-align: center;
+    background-color: var(--accent-color);
+    color: var(--accent-text);
+    font-size: 1.7em;
+    padding: 32px;
 }
 
 #news blockquote p:before {
@@ -170,6 +182,7 @@ main p:first-child {
 
 #news blockquote cite {
     font-family: 'Dosis', sans-serif;
+    text-align: right;
 }
 
 footer {

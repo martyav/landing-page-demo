@@ -3,9 +3,9 @@
 
 <head>
     <title>Demo Landing Page</title>
-    <link href="https://fonts.googleapis.com/css?family=Dosis:300|Overlock|Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300|Exo|Oswald" rel="stylesheet">
     <link  href="style.css" rel="stylesheet">
-    </head>
+</head>
 
 <body>
     <header>
@@ -17,16 +17,13 @@
         <nav id="nav-bar">
             <ul>
                 <li>
-                    <button class="nav-link">About us</button>
+                    <button class="nav-link" onclick = "location.href='#about';">About us</button>
                 </li>
                 <li>
-                    <button class="nav-link">Get in touch</button>
+                    <button class="nav-link" onclick = "location.href='#signup';">Get in touch</button>
                 </li>
                 <li>
-                    <button class="nav-link">Testimonials</button>
-                </li>
-                <li>
-                    <button class="nav-link">News</button>
+                    <button class="nav-link" onclick = "location.href='#news';">News</button>
                 </li>
             </ul>
         </nav>
@@ -42,20 +39,21 @@
                 We determine your current location and send you a plane ticket to the opposite side of the Earth.
             </p>
         </section>
-        <form id="signup">
-            <label>Intriqued?</label>
-            <input type="email" placeholder="email@aol.com" />
-            <button type="submit">Submit</button>
-        </form>
-        <section id="testimonial">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MEjutUbgpH8?rel=0" frameborder="0" allow="encrypted-media"></iframe>
+        <section id="signup">
+            <img src = "https://farm8.staticflickr.com/7123/7663247816_4ef6c4d123_b.jpg" alt = "A picture of the Earth" />
+            <form>
+                <label>Intrigued?<sup>*</sup></label>
+                <input type="email" placeholder="email@aol.com" />
+                <button type="submit">Submit</button>
+            </form>
         </section>
         <section id="news">
-            <h2>Antipode News</h2>
-            <hr />
-            <p>
-                <strong>July 30:</strong> We visited some happy English customers in the Southern Pacific Gyre!
-            </p>
+            <div class = "article">
+                <h2>Antipode News</h2>
+                <p>
+                    <strong>July 30:</strong> We visited some happy English customers in the South Pacific Gyre!
+                </p>
+            </div>
             <blockquote>
                 <p>
                     What a relief from Brexit!
@@ -68,7 +66,7 @@
     </main>
 
     <footer>
-        2018 Creative Commons
+        * This is just a demo. We can't send you plane tickets.
     </footer>
 </body>
 
