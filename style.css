@@ -9,6 +9,25 @@ body {
     margin: 0;
 }
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 480px) {
+    #nav-bar {
+        display: none;
+    }
+
+    #nav-dropdown {
+        min-height: 44px;
+        max-height: 5vh;
+        margin: 8px;
+    }
+}
+
+@media (min-width: 481px) {
+    #nav-dropdown {
+        display: none;
+    }
+}
+
 header, footer, main {
     font-family: 'Dosis', sans-serif;
     width: 100%;
@@ -40,6 +59,7 @@ header {
 }
 
 header * {
+    flex: row wrap;
     display: inline;
     align-items: baseline;
     margin-left: 8px;
@@ -59,7 +79,7 @@ header h1 {
     width: auto;
 }
 
-.nav-link {
+.nav-link {    
     background-color: inherit;
     color: inherit;
     font-size: 0.9em;

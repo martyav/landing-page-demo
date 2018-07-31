@@ -6,6 +6,7 @@
     <meta property="og:image" content="images/preview.png" />
     <link href="https://fonts.googleapis.com/css?family=Dosis:300|Exo|Oswald" rel="stylesheet">
     <link  href="style.css" rel="stylesheet">
+    <script src = "script.js"></script>
 </head>
 
 <body>
@@ -15,6 +16,13 @@
                 alt="logo" />
             <h1>FAR OUT Travel Tours</h1>
         </div>
+        <nav id = "nav-dropdown" onchange = "selectOption()">
+            <select id = "menu">
+                    <option value = "about">About us</option>
+                    <option value = "signup">Get in touch</option>
+                    <option value = "news">News</option>
+            </select>
+        </nav>
         <nav id="nav-bar">
             <ul>
                 <li>
