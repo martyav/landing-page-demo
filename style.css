@@ -1,5 +1,6 @@
 body {
     --accent-color: #0047AB; /* cobalt */
+    --focus-color: cornflowerblue;
     --main-color: white;
     --secondary-color: #ddd;
     --main-text: #333;
@@ -9,8 +10,12 @@ body {
     margin: 0;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width: 480px) {
+/* Smaller smartphones (portrait and landscape) */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px !important;
+    }
+
     #nav-bar {
         display: none;
     }
@@ -20,7 +25,53 @@ body {
         max-height: 5vh;
         margin: 8px;
     }
+
+    #nav-dropdown #menu {
+        font-size: 1em;
+    }
+
+    #about {
+        max-width: 100% !important;
+        margin: 8px !important;
+        font-size: 1em !important;
+        text-align: justify;
+    }
+
+    #signup { 
+        background-image: url("images/earth.jpg");
+    }
+
+    #signup img {
+        display: none;
+    }
+
+    #signup form {
+        font-size: 2em !important;
+    }
+
+    #news {
+        grid-template-columns: none !important;
+        grid-template-rows: 25vh 25vh;
+        align-content: stretch;
+        justify-content: stretch !important;
+        grid-gap: 4px;
+        padding: 16px !important;
+        text-align: justify;
+    }
+
+    #news blockquote {
+        flex: 1 1 auto;
+        font-size: 1em !important;
+        padding: 16px !important;
+        margin: 0 !important;
+    }
+
+    #news blockquote cite {
+        align-self: flex-end;
+    }
 }
+
+/* Anything bigger */
 
 @media (min-width: 481px) {
     #nav-dropdown {
@@ -88,7 +139,7 @@ header h1 {
 }
 
 .nav-link:hover {
-    background-color: cornflowerblue;
+    background-color: var(--focus-color);
 }
 
 main {
@@ -128,7 +179,7 @@ main {
     display: flex;
     flex-flow:row wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     font-size: 3em;
     font-family: 'Oswald', sans-serif;
     padding-bottom: 30px;
@@ -139,21 +190,24 @@ main {
     text-align: center;
 }
 
+#signup form * {
+    margin-left: 8px;
+}
+
 #signup input[type = "email"] {
     min-height: 44px;
     line-height: 44px;
     font-size: 20px;
     padding-left: 8px;
     margin-left: 8px;
-    border-bottom: 3px solid var(--accent-color);
+    border-left: 1px solid var(--focus-color);;
+    border-right: 1px solid var(--focus-color);;
+    border-bottom: 3px solid var(--focus-color);
     background-color: var(--secondary-color);
 }
 
 #signup input[type = "email"]:hover {
     background-color: white;
-    border-left: 1px solid var(--accent-color);;
-    border-right: 1px solid var(--accent-color);;
-    border-top: 1px solid var(--accent-color);;
 }
 
 #signup button {
@@ -164,7 +218,7 @@ main {
     padding-left: 16px;
     padding-right: 16px;
     min-height: 48px;
-    border: none;
+    border: 1px solid var(--focus-color);
 }
 
 #news {
