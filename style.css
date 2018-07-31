@@ -1,7 +1,7 @@
 body {
     --accent-color: green;
     --main-color: white;
-    --secondary-color: silver;
+    --secondary-color: #ddd;
     --main-text: #333;
     --accent-text: white;
     
@@ -33,12 +33,14 @@ header {
     left: 0;
     right: 0;
     z-index: 10000;
+    box-shadow: 0 3px 15px black;
+    justify-content: space-between;
 }
 
 header * {
     display: inline;
     align-items: baseline;
-    margin: 8px;
+    margin-left: 8px;
 }
 
 header h1 {
@@ -55,10 +57,6 @@ header h1 {
     width: auto;
 }
 
-#nav-bar {
-    justify-self: end;
-}
-
 .nav-link {
     background-color: inherit;
     color: inherit;
@@ -72,12 +70,56 @@ main {
     color: var(--main-text);
 }
 
+main p:first-child {
+    color: var(--accent-color);
+}
+
 #about {
+   font-size: 2em;
+   line-height: 1.3em;
+   font-family: 'Overlock', sans-serif;
+   max-width: 50vw;
+   min-width: 33vw;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#signup {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3em;
     font-family: 'Oswald', sans-serif;
-    font-size: 2em;
-    width: 66vw;
+    padding-bottom: 30px;
+    max-width: 60vw;
+    min-width: 50vw;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+}
+
+#signup input[type = "email"] {
+    min-height: 44px;
+    line-height: 44px;
+    font-size: 20px;
+    padding-left: 8px;
+    margin-left: 16px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 3px solid var(--accent-color);
+    background-color: var(--secondary-color);
+}
+
+#signup button {
+    background-color: var(--accent-color);
+    color: var(--accent-text);
+    padding-top: none;
+    padding-bottom: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    min-height: 48px;
+    border: none;
 }
 
 /*
@@ -92,6 +134,8 @@ main {
     padding-top: 35px;
     height: 0;
     overflow: hidden;
+    border-top: 22px solid var(--accent-color);
+    border-bottom: 22px solid var(--accent-color);
 }
 
 #testimonial iframe {
