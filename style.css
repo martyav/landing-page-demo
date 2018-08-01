@@ -175,7 +175,6 @@ main {
     border-top: 20px solid var(--accent-color);
     background-color: black;
     color: white;
-    height: 25vw;
 }
 
 #signup form {
@@ -189,6 +188,7 @@ main {
     padding-bottom: 30px;
     max-width: 60vw;
     min-width: 50vw;
+    min-height: 25vh;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
